@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgdtwn18l537x"]
+
+[ext_resource type="Texture2D" uid="uid://dqadyd5ep0xb" path="res://costume5.png" id="1_4qwwl"]
+[ext_resource type="Script" uid="uid://b3xmumwgnykqu" path="res://Sources.gd" id="2_obosj"]
+[ext_resource type="Script" uid="uid://n7o28thsn8s7" path="res://back.gd" id="3_obosj"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Costume5" type="Sprite2D" parent="."]
+position = Vector2(579, 348.5)
+scale = Vector2(1.22083, 1.02083)
+texture = ExtResource("1_4qwwl")
+
+[node name="Button" type="Button" parent="Costume5"]
+offset_left = -136.792
+offset_top = 99.4286
+offset_right = 68.2083
+offset_bottom = 165.429
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Source"
+script = ExtResource("2_obosj")
+
+[node name="Button2" type="Button" parent="Costume5"]
+offset_left = -128.601
+offset_top = 186.612
+offset_right = 60.3993
+offset_bottom = 224.612
+text = "Back"
+script = ExtResource("3_obosj")
+
+[connection signal="pressed" from="Costume5/Button" to="Costume5/Button" method="_on_pressed"]
+[connection signal="pressed" from="Costume5/Button2" to="Costume5/Button" method="_on_button_2_pressed"]
